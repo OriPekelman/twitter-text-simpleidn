@@ -5,12 +5,12 @@
 # encoding: utf-8
 
 Gem::Specification.new do |s|
-  s.name = "twitter-text"
-  s.version = "3.1.0"
+  s.name = "twitter-text-simpleidn"
+  s.version = "3.0.0.0"
   s.authors = ["David LaMacchia", "Sudheer Guntupalli", "Kaushik Lakshmikanth", "Jose Antonio Marquez Russo", "Lee Adams",
-               "Yoshimasa Niwa"]
-  s.email = ["opensource@twitter.com"]
-  s.homepage = "http://twitter.com"
+               "Yoshimasa Niwa", "Kazuki Ishihara"]
+  s.email = ["shibafu528@gmail.com"]
+  s.homepage = "https://github.com/shibafu528/twitter-text-simpleidn"
   s.description = s.summary = "A gem that provides text handling for Twitter"
   s.license = "Apache 2.0"
 
@@ -25,9 +25,9 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec", "~> 3.0"
   s.add_development_dependency "simplecov"
   s.add_runtime_dependency     "unf", "~> 0.1.0"
-  # Use of idn-ruby requires libidn to be installed separately
-  s.add_runtime_dependency     "idn-ruby"
-
+  # replace ruby-idn by simpleidn
+  s.add_runtime_dependency     "simpleidn"
+  
   s.files         = `git ls-files`.split("\n") + ['lib/assets/tld_lib.yml'] + Dir['config/*']
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
