@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency     "unf", "~> 0.1.0"
   # replace ruby-idn by simpleidn
   s.add_runtime_dependency     "simpleidn"
-  s.files         = `git ls-files`.split("\n") + ['lib/assets/tld_lib.yml'] + Dir['config/*']
+  s.files         = `git ls-files`.split("\n") + ['conformance/tld_lib.yml'] + Dir['config/*']
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
